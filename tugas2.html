@@ -1,0 +1,72 @@
+<script>
+  let s1 = { nama: "Nanda", nilai: 80 };
+  let s2 = { nama: "Bayu", nilai: 82 };
+  let s3 = { nama: "Arkan", nilai: 45 };
+  let s4 = { nama: "Wahyu", nilai: 85 };
+  let s5 = { nama: "Ammar", nilai: 50 };
+  let s6 = { nama: "Adinda", nilai: 88 };
+  let s7 = { nama: "Aida", nilai: 90 };
+  let s8 = { nama: "Azmi", nilai: 80 };
+  let s9 = { nama: "Alif", nilai: 76 };
+  let s10 = { nama: "Awin", nilai: 30 };
+
+  let siswa = [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10];
+</script>
+
+<table style="padding: 20; text-align: center; width: 100%">
+  <thead>
+    <tr>
+      <th>Nomor</th>
+      <th>Nama</th>
+      <th>Nilai</th>
+      <th>Keterangan</th>
+      <th>Grade</th>
+      <th>Predikat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <script>
+      var no = 1;
+      for (s of siswa) {
+        let ket = s.nilai >= 60 ? "LULUS" : "GAGAL";
+        let grade = "";
+        let predikat = "";
+
+        if (s.nilai > 85 && s.nilai <= 100) grade = "A";
+        else if (s.nilai > 75 && s.nilai <= 85) grade = "B";
+        else if (s.nilai >= 60 && s.nilai <= 75) grade = "C";
+        else if (s.nilai > 30 && s.nilai < 60) grade = "D";
+        else if (s.nilai >= 0 && s.nilai <= 30) grade = "E";
+        else grade = "";
+        switch (grade) {
+          case "A":
+            predikat = "Sempurna";
+            break;
+          case "B":
+            predikat = "Baik";
+            break;
+          case "C":
+            predikat = "Cukup";
+            break;
+          case "D":
+            predikat = "Kurang";
+            break;
+          case "E":
+            predikat = "Buruk";
+            break;
+          default:
+            predikat = "";
+            break;
+        }
+        document.write("<tr style='background-color: " + (no % 2 == 0 ? "yellow" : "pink") + "'>");
+        document.write("<td>" + no++ + "</td>");
+        document.write("<td>" + s.nama + "</td>");
+        document.write("<td>" + s.nilai + "</td>");
+        document.write("<td>" + ket + "</td>");
+        document.write("<td>" + grade + "</td>");
+        document.write("<td>" + predikat + "</td>");
+        document.write("</tr>");
+      }
+    </script>
+  </tbody>
+</table>
