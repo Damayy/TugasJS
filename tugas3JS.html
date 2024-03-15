@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS eksternal</title>
+  </head>
+  <body>
+    <form id="frm">
+      <table style="width: 50%; background-color: cornflowerblue; border: 1px solid; text-align: center; margin: auto">
+        <tr>
+          <th colspan="2">Form Input</th>
+        </tr>
+        <tr>
+          <td><label for="">Nama :</label></td>
+          <td>
+            <input type="text" name="nama" id="" placeholder="masukkan nama anda" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label for="">Pekerjaan :</label>
+          </td>
+          <td>
+            <input type="text" name="pekerjaan" id="" placeholder="masukkan pekerjaan anda" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Hobby :</label>
+          </td>
+          <td>
+            <input type="text" name="hobby" id="" placeholder="masukkan hobby anda" />
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4">
+            <input type="button" name="proses" id="submitBtn" value="Submit" onclick="dataPerson()" />
+          </td>
+        </tr>
+      </table>
+
+      <h2 style="width: 100%; text-align: center" id="hasil"></h2>
+    </form>
+
+    <center id="hasil"></center>
+
+    <script src="js/skrip.js"></script>
+  </body>
+</html>
