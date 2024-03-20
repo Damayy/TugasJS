@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 5 Query | JS</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h2>Letakkan kursor ke masing-masing kotak untuk melihat gambar</h2>
+    <div id="div1">Hewan ini Ikan Koi</div>
+    <div id="div2">Hewan ini Gajah</div>
+    <div id="div3">Hewan ini Kucing</div>
+    <div id="div4">Hewan ini Singa</div>
+    <div id="div5">Hewan ini Katak</div>
+
+    <audio id="musik1" src="musik/Suara Ikan Berenang.mp3"></audio>
+    <audio id="musik2" src="musik/SUARA GAJAH Ngamuk mp3.mp3"></audio>
+    <audio id="musik3" src="musik/SUARA KUCING MEMANGGIL TEMANNYA.mp3"></audio>
+    <audio id="musik4" src="musik/Lion Roar.mp3"></audio>
+    <audio id="musik5" src="musik/Sound Katak.mp3"></audio>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $("document").ready(function () {
+        $("#div1").mouseover(function () {
+          $(this).css({
+            background:
+              "url('https://cdn1-production-images-kly.akamaized.net/Wc7V4NhLn-nfsgDlg-rXl8q1OXU=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2743495/original/059877600_1551769897-foto_2_maskoki.jpg')",
+          });
+          $("#musik1")[0].play();
+        });
+
+        $("div").mouseout(function () {
+          $(this).css({
+            background: "green",
+          });
+          $("#musik1")[0].pause();
+        });
+
+        $("#div2").mouseover(function () {
+          $(this).css({
+            background: "url('https://asset.kompas.com/crops/KUaRFKv4gh8Ksv1fnvjXkDDNZLE=/0x0:800x533/750x500/data/photo/2019/02/23/1973281050.jpg')",
+            // background-repeat: no-repeat;
+          });
+          $("#musik2")[0].play();
+        });
+
+        $("div").mouseout(function () {
+          $(this).css({
+            background: "green",
+          });
+          $("#musik2")[0].pause();
+        });
+
+        $("#div3").mouseover(function () {
+          $(this).css({
+            background: "url('https://res.cloudinary.com/dk0z4ums3/image/upload/v1661753020/attached_image/inilah-cara-merawat-anak-kucing-yang-tepat.jpg')",
+            // background-repeat: no-repeat;
+          });
+          $("#musik3")[0].play();
+        });
+
+        $("div").mouseout(function () {
+          $(this).css({
+            background: "green",
+          });
+          $("#musik3")[0].pause();
+        });
+
+        $("#div4").mouseover(function () {
+          $(this).css({
+            background: "url('https://asset-a.grid.id/crop/0x0:0x0/x/photo/2023/02/13/alasan-mengapa-singa-disebut-seb-20230213122005.jpg')",
+          });
+          $("#musik4")[0].play();
+        });
+
+        $("div").mouseout(function () {
+          $(this).css({
+            background: "green",
+          });
+          $("#musik4")[0].pause();
+        });
+
+        $("#div5").mouseover(function () {
+          $(this).css({
+            background: "url('https://asset-a.grid.id/crop/0x0:0x0/x/photo/2023/07/07/9jpg-20230707023628.jpg')",
+          });
+          $("#musik5")[0].play();
+        });
+
+        $("div").mouseout(function () {
+          $(this).css({
+            background: "green",
+          });
+          $("#musik5")[0].pause();
+        });
+      });
+    </script>
+  </body>
+</html>
